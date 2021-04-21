@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from "./store";
+import { bugAdded, bugResolved } from "./actions";
+
+// Redux setup
+store.subscribe(() => {
+	console.log("Store changed!", store.getState());
+});
+store.dispatch(bugAdded("Bug 1"));
+store.dispatch(bugResolved(1));
+console.log(store.getState());
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +20,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
