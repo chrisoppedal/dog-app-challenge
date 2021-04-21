@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+*app link*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://cgoppedal-dog-app-challenge.netlify.app
 
-## Available Scripts
+*Description*
 
-In the project directory, you can run:
+As a dog lover, I want a web application which allows me to display dog pictures!
 
-### `yarn start`
+*Level 1 Acceptance Criteria*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Demonstrate that the user can type in a dog breed into a text box.
+- Demonstrate that if the user types in a valid dog breed, that images for the breed show up.
+- Demonstrate an error message is shown if the typed in text does not return any images.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+*Level 2 Acceptance Criteria*
 
-### `yarn test`
+- Demonstrate that the text box is replaced with a dropdown showing the primary breeds.
+- Demonstrate that upon selection of a breed in the dropdown, that the images for the breed are displayed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*Level 3 Acceptance Criteria*
 
-### `yarn build`
+- Demonstrate that an additional dropdown is added to select sub-breeds for any breed that has sub-breeds.
+- Demonstrate upon selection of a sub-breed, that only images from that sub-breed appear.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*Technical notes*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Use the Dog API found on: https://dog.ceo/dog-api/
 
-### `yarn eject`
+You may put all the code in app.js or separate into files. Entirely your preference for purposes of this exercise, and your choice will not be judged.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You may use online resources to help you solve the problem, but please ensure it's a part of the screen share.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All the imports you should need are already included, but you can import anything you want.
