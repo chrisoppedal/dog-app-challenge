@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styled from 'styled-components';
 
 export default function App() {
   const [breeds, setBreeds] = useState([]);
@@ -12,6 +13,19 @@ export default function App() {
       });
     });
   }, []);
+
+  // Styled components
+  const StyledContainer = styled.div`
+    text-align: center;
+    margin: 20dp;
+  `;
+  const Dropdown = styled.div`
+    margin: 20px 0px;
+  `;
+  const Image = styled.img`
+    height: 200px;
+    margin: 5px;
+  `;
 
   const inputChanged = (e) => {
     setimageSrc([]);
@@ -34,9 +48,9 @@ export default function App() {
   };
 
   return (
-    <div style={{ margin: "20px", textAlign: "center" }}>
+    <StyledContainer>
       <strong className="app">Dog App Challenge!</strong>
-      <div style={{ marginTop: "20px", marginBottom: "20px" }}>
+      <Dropdown>
         <select id="lang" onChange={inputChanged}>
           <option value="">Select a breed</option>
 
@@ -47,12 +61,12 @@ export default function App() {
               </option>
             );
           })}
+
         </select>
-      </div>
+      </Dropdown>
       {isValidBreed ? imageSources.map((src, i) => {
             return (
-              <img
-                style={{ height: "200px", margin: "5px" }}
+              <Image
                 alt=""
                 key={i}
                 src={src}
@@ -60,6 +74,6 @@ export default function App() {
             );
           })
         : null}
-    </div>
+    </StyledContainer>
   );
 }
