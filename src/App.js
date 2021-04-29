@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
-import { color } from 'styled-system';
+import { space, layout, color } from 'styled-system';
 import { ThemeProvider } from 'styled-components'
 import theme from './theme'
 
@@ -19,8 +19,8 @@ export default function App() {
 
   // Styled components
   const StyledContainer = styled.div`
-    text-align: center;
     margin: 20dp;
+    text-align: center;
     color: ${props => props.bg === "brand-primary" ? "#B8232F" : "black"};
   `;
   const Dropdown = styled.div.attrs(props => ({
@@ -34,6 +34,11 @@ export default function App() {
   const Image = styled.img`
     height: 200px;
     margin: 5px;
+  `;
+  const ImageContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   `;
   const Title = styled.span.attrs(props => ({
     margin: '20px 0px',
@@ -51,7 +56,9 @@ export default function App() {
     margin-top: 10px;
     color: black `;
   const Box = styled.div`
-     ${color}
+    ${color}
+    ${space}
+    ${layout}
   `;
 
   const inputChanged = (e) => {
@@ -76,7 +83,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box color="bgs" bg="backgroundColor">
+      <Box color="textColor" bg="backgroundColor" m="-8px" pt="10px">
         <StyledContainer bg="brand-primary">
           <Title></Title>
           <Subtitle as="div"></Subtitle>
@@ -94,6 +101,7 @@ export default function App() {
 
             </select>
           </Dropdown>
+          <ImageContainer>
           {isValidBreed ? imageSources.map((src, i) => {
                 return (
                   <Image
@@ -104,6 +112,7 @@ export default function App() {
                 );
               })
             : null}
+            </ImageContainer>
         </StyledContainer>
       </Box>
     </ThemeProvider>
