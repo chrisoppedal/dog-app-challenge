@@ -68,7 +68,7 @@ export default function App() {
   return (
     <StyledContainer bg="brand-primary">
       <Title></Title>
-      <Subtitle></Subtitle>
+      <Subtitle as="h3"></Subtitle>
       <Dropdown>
         <select id="lang" onChange={inputChanged}>
           <option value="">Select a breed</option>
