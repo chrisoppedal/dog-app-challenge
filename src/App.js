@@ -18,9 +18,13 @@ export default function App() {
   const StyledContainer = styled.div`
     text-align: center;
     margin: 20dp;
+    color: ${props => props.bg === "brand-primary" ? "#B8232F" : "black"};
   `;
-  const Dropdown = styled.div`
-    margin: 20px 0px;
+  
+  const Dropdown = styled.div.attrs(props => ({
+    margin: '20px 0px',
+  }))`  
+    margin: ${props => props.margin};
   `;
   const Image = styled.img`
     height: 200px;
@@ -48,7 +52,7 @@ export default function App() {
   };
 
   return (
-    <StyledContainer>
+    <StyledContainer bg="brand-primary">
       <strong className="app">Dog App Challenge!</strong>
       <Dropdown>
         <select id="lang" onChange={inputChanged}>
