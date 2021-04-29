@@ -20,7 +20,7 @@ export default function App() {
     margin: 20dp;
     color: ${props => props.bg === "brand-primary" ? "#B8232F" : "black"};
   `;
-  
+
   const Dropdown = styled.div.attrs(props => ({
     margin: '20px 0px',
   }))`  
@@ -30,6 +30,20 @@ export default function App() {
     height: 200px;
     margin: 5px;
   `;
+  const Title = styled.div.attrs(props => ({
+    margin: '20px 0px',
+    display: 'block',
+    children: 'Dog App Challenge!'
+  }))`
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 30px; `;
+  const Subtitle = styled(Title).attrs(props => ({
+    fontSize: '300px',
+    children: 'Created with React, Redux, and styled components'
+  }))`
+    font-size: 20px;
+    color: black `;
 
   const inputChanged = (e) => {
     setimageSrc([]);
@@ -53,7 +67,8 @@ export default function App() {
 
   return (
     <StyledContainer bg="brand-primary">
-      <strong className="app">Dog App Challenge!</strong>
+      <Title></Title>
+      <Subtitle></Subtitle>
       <Dropdown>
         <select id="lang" onChange={inputChanged}>
           <option value="">Select a breed</option>
